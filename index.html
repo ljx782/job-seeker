@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <meta name="description" content="Jobseeker 寻职者：发现适合你的机会，打磨真实的简历，记录每一步求职进展。">
+  <title>Jobseeker · 寻职者</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/studio.css">
+  <link rel="stylesheet" href="css/agent.css">
+  <link rel="stylesheet" href="css/workspace-refresh.css">
+  <link rel="stylesheet" href="css/discovery-refresh.css">
+  <link rel="stylesheet" href="css/resume-refresh.css">
+  <link rel="stylesheet" href="css/tracker-refresh.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">跳转到主要内容</a>
+  <aside class="sidebar" aria-label="主导航">
+    <a href="#/jobs" class="brand"><img src="assets/icons/logo.svg" width="36" height="36" alt=""><span>Jobseeker<small>寻职者</small></span></a>
+    <div class="workspace-label">我的求职手账 <span>WORKSPACE</span></div>
+    <nav id="desktop-nav"></nav>
+    <div class="sidebar-note"><span class="tiny-star">✳</span><p>每一小步，<br>都在靠近理想的工作。</p><small>YOUR NEXT CHAPTER STARTS HERE</small></div>
+    <div class="sidebar-bottom"><a href="#/settings" class="settings-link" id="settings-link"></a><button class="profile-link" id="profile-link" type="button"></button></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar"><div class="breadcrumb"><span class="desktop-only">我的工作台</span><span class="desktop-only">/</span><strong id="page-label">发现岗位</strong></div><div class="topbar-actions"><span class="mode-pill" id="mode-label"><i></i>AI 连接中</span><button class="icon-button" id="notifications-button" aria-label="查看提醒"></button><button class="avatar" id="header-avatar" aria-label="编辑个人档案">林</button></div></header>
+    <main id="main-content" tabindex="-1"><div class="initial-loading"><img src="assets/icons/logo.svg" width="48" alt=""><p>翻开你的求职手账…</p></div></main>
+    <footer class="app-footer"><span>Jobseeker · 为每一次勇敢出发</span><span id="save-status">数据保存在当前浏览器</span></footer>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="移动端导航"></nav>
+  <dialog id="app-dialog" aria-labelledby="dialog-title"></dialog>
+  <div class="toast-stack" id="toast-stack" role="status" aria-live="polite"></div>
+  <div id="print-root"></div>
+  <noscript><p class="fatal-error">请启用 JavaScript 后使用 Jobseeker。</p></noscript>
+  <script>if(location.protocol==='file:'){document.getElementById('main-content').innerHTML='<div class="fatal-error"><h1>先启动你的求职工作台</h1><p>双击项目中的 start.cmd，或在 job-pilot 文件夹运行 <code>npm start</code>，然后打开 <strong>http://localhost:4173</strong>。</p><p>本地服务器仅负责提供静态文件，不需要安装依赖。</p></div>'}</script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

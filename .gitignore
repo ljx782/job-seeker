@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.netlify/
+artifacts/
+*.log
+.env
+.env.*
+!.env.example

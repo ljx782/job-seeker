@@ -1,0 +1,22 @@
+[
+  {
+    "id": "tech",
+    "name": "技术 · 清晰有序",
+    "description": "突出技术技能、工程实践与项目经验"
+  },
+  {
+    "id": "product",
+    "name": "产品 · 结果导向",
+    "description": "优先展示工作经历与业务思考"
+  },
+  {
+    "id": "design",
+    "name": "设计 · 留白之间",
+    "description": "突出个人表达与项目作品"
+  },
+  {
+    "id": "general",
+    "name": "通用 · 简约经典",
+    "description": "适合跨行业投递的经典单栏布局"
+  }
+]

@@ -1,0 +1,197 @@
+/* Shared screen UI. Resume exports keep their independent paper styles. */
+@media screen {
+  :root {
+    --paper: #f7f8f2;
+    --surface: #ffffff;
+    --ink: #243b30;
+    --muted: #627066;
+    --line: #dfe5db;
+    --soft: #f0f3eb;
+    --green: #426149;
+    --green-soft: #eaf0e4;
+    --accent: #efb449;
+    --accent-dark: #815613;
+    --yellow: #fbf2dc;
+    --shadow: 0 3px 16px #243b3005;
+  }
+  :root[data-theme=dark] {
+    --paper: #1c2520;
+    --surface: #25312a;
+    --ink: #edf2e8;
+    --muted: #b2c0b4;
+    --line: #405145;
+    --soft: #303d32;
+    --green: #bfd4ab;
+    --green-soft: #344536;
+    --accent: #efb449;
+    --accent-dark: #f0c87b;
+    --yellow: #423b28;
+  }
+  body { font-size: 14px; line-height: 1.65; }
+  body::before { opacity: .08; }
+  h1 { font-size: clamp(26px, 2.3vw, 32px); line-height: 1.35; margin-bottom: 7px; }
+  h2 { font-size: 21px; letter-spacing: -.025em; }
+  input::placeholder, textarea::placeholder { color: var(--muted); opacity: .8; }
+  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible,
+  textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+    outline: 2px solid var(--green); outline-offset: 3px;
+  }
+  .sidebar { width: 210px; padding: 28px 18px 20px; }
+  .brand { margin: 0 6px 34px; gap: 10px; }
+  .brand>span { font-size: 25px; }
+  .brand small { font-size: 12px; color: var(--green); margin-top: 5px; }
+  .workspace-label { font-size: 12px; letter-spacing: .3px; padding: 0 12px; margin-bottom: 13px; }
+  .workspace-label span { display: none; }
+  .nav-link { min-height: 46px; padding: 11px 12px; margin-bottom: 5px; font-size: 14px; color: var(--muted); border-radius: 8px; }
+  .nav-link.active { background: var(--green-soft); color: var(--green); }
+  .nav-link.active::before { left: -18px; height: 22px; background: var(--green); }
+  .nav-link small { font-size: 12px; padding: 2px 7px; background: var(--surface); color: var(--green); }
+  .nav-link.active svg { stroke-width: 2; }
+  .sidebar-note { margin: 36px 12px 24px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .tiny-star { color: #a1ae8f; font-size: 26px; }
+  .sidebar-note p { font-size: 14px; line-height: 1.9; margin: 9px 0; }
+  .sidebar-note small { display: none; }
+  .settings-link { font-size: 14px; padding: 11px 12px; }
+  .settings-link.active { background: var(--green-soft); color: var(--green); border-radius: 8px; }
+  .profile-link { padding-top: 17px; margin-top: 13px; }
+  .profile-link strong { font-size: 14px; }
+  .profile-link small { font-size: 11px; margin-top: 2px; }
+  .avatar { width: 36px; height: 36px; background: var(--green-soft); border-color: var(--line); color: var(--green); }
+  .app-shell { margin-left: 210px; }
+  .topbar { height: 60px; padding: 0 30px; background: var(--paper); }
+  .breadcrumb { font-size: 12px; gap: 12px; }
+  .breadcrumb strong { font-weight: 600; }
+  .topbar-actions { gap: 16px; }
+  .mode-pill { font-size: 12px; }
+  .mode-pill i { width: 6px; height: 6px; }
+  .notification-dot { min-width: 18px; height: 18px; font-size: 10px; line-height: 14px; }
+  #main-content { max-width: 1580px; padding: 25px 30px 36px; min-width: 0; }
+  .page-heading { margin-bottom: 22px; gap: 16px; }
+  .page-heading>div { min-width: 0; }
+  .page-heading p { font-size: 14px; letter-spacing: 0; line-height: 1.6; }
+  .eyebrow { font-size: 10px; letter-spacing: 1.6px; color: var(--green); margin-bottom: 8px; }
+  .highlight-underline::after { height: 8px; background: #e7c57b; opacity: .5; bottom: 1px; }
+  .app-footer { padding: 16px 30px; font-size: 12px; color: var(--muted); }
+  .caption, .section-label { font-size: 12px; }
+  .button { min-height: 42px; padding: 10px 16px; font-size: 14px; border-radius: 7px; font-weight: 600; }
+  .button.primary { color: #3d311c; box-shadow: 0 2px 4px #9d762a12; }
+  .button.primary:hover { background: #e8a82f; border-color: #e8a82f; }
+  .button.secondary:hover { border-color: #a9b99e; background: var(--soft); }
+  .button.small { min-height: 36px; padding: 7px 12px; font-size: 12px; }
+  .icon-button { width: 38px; height: 38px; border-radius: 7px; }
+  .text-button { font-size: 13px; min-height: 32px; }
+  .button-group { flex-wrap: wrap; gap: 9px; }
+  .field { font-size: 13px; }
+  .field input, .field select, .field textarea { font-size: 14px; padding: 10px 12px; border-radius: 6px; min-height: 42px; background: var(--surface); }
+  .field small { font-size: 12px; line-height: 1.6; }
+  .field input:focus, .field textarea:focus, .field select:focus { border-color: #839b78; }
+  .panel { border-radius: 10px; box-shadow: var(--shadow); padding: 23px; }
+  .panel-heading { gap: 12px; flex-wrap: wrap; }
+  .panel-heading h2, .panel-heading h3 { font-size: 20px; }
+  .panel-heading .caption { font-size: 10px; letter-spacing: .7px; }
+  .empty-state { font-size: 14px; line-height: 1.8; }
+  .segmented { padding: 4px; border: 1px solid var(--line); border-radius: 8px; background: var(--soft); }
+  .segmented button { min-height: 36px; font-size: 13px; padding: 7px 13px; border-radius: 5px; }
+  .segmented button.active { background: var(--surface); color: var(--ink); box-shadow: 0 1px 3px #243b3010; }
+  .metric-grid { gap: 16px; margin-bottom: 22px; }
+  .metric-card { border-radius: 10px; padding: 21px 22px; box-shadow: var(--shadow); border-top: 3px solid var(--line); }
+  .metric-card:nth-child(2) { border-top-color: #9aad8c; }
+  .metric-card:nth-child(3) { border-top-color: var(--accent); }
+  .metric-card label { font-size: 13px; color: var(--muted); }
+  .metric-card strong { font-size: 36px; margin: 7px 0; color: var(--ink); }
+  .metric-card small { font-size: 12px; line-height: 1.5; }
+  .insights-grid { gap: 20px; }
+  .chart-container { height: 250px; margin-top: 20px; }
+  .chart-accessible { font-size: 12px; line-height: 1.8; }
+  .insight-note { padding: 16px; font-size: 14px; }
+  .insight-note strong { font-size: 14px; }
+  .insight-note p { font-size: 13px; line-height: 1.8; margin: 6px 0 0; }
+  .settings-layout { gap: 24px; grid-template-columns: minmax(0,1.25fr) minmax(280px,.85fr); }
+  .settings-layout>div { min-width: 0; }
+  .setting-description, .radio-card, .theme-button, .consent-row { font-size: 14px; }
+  .radio-card { border-radius: 7px; }
+  .radio-card small, .theme-button small, .inline-note, .local-note { font-size: 12px; line-height: 1.7; }
+  .data-action { gap: 14px; }
+  .data-action strong { font-size: 14px; }
+  .data-action small { font-size: 12px; }
+  .version-label { font-size: 11px; color: var(--muted); }
+  .data-table { font-size: 13px; }
+  .data-table th, .data-table td { padding: 13px 12px; }
+  .data-table th { font-size: 12px; }
+  dialog { border-radius: 12px; }
+  .dialog-heading { padding: 20px 24px; }
+  .dialog-heading h2 { font-size: 22px; }
+  .dialog-body { padding: 24px; }
+  .dialog-body p, .dialog-body li { font-size: 14px; }
+  .dialog-body .caption, .dialog-body small { font-size: 12px; }
+  .dialog-actions { flex-wrap: wrap; }
+  .toast { font-size: 14px; border-radius: 8px; }
+  :root[data-theme=dark] .theme-button, :root[data-theme=dark] .radio-card { color: var(--ink); }
+}
+
+@media screen and (min-width: 1600px) {
+  .sidebar { width: 224px; padding-inline: 22px; }
+  .app-shell { margin-left: 224px; }
+  .nav-link.active::before { left: -22px; }
+  #main-content { padding: 28px 38px 40px; }
+  .topbar { padding-inline: 38px; }
+}
+@media screen and (max-width: 1100px) {
+  .sidebar { width: 188px; padding-inline: 14px; }
+  .brand { margin-left: 2px; gap: 8px; }
+  .brand>span { font-size: 22px; }
+  .brand img { width: 31px; height: 31px; }
+  .app-shell { margin-left: 188px; }
+  .nav-link.active::before { left: -14px; }
+  .sidebar-note { margin-inline: 10px; }
+  #main-content { padding: 24px; }
+  .topbar { padding-inline: 24px; }
+  .settings-layout { grid-template-columns: 1fr; }
+  .metric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media screen and (max-width: 740px) {
+  .sidebar { display: none; }
+  .app-shell { margin-left: 0; }
+  .topbar { height: 58px; padding: 0 18px; }
+  .breadcrumb strong { font-family: var(--sans); font-size: 14px; }
+  .topbar-actions { gap: 8px; }
+  .topbar .avatar { width: 32px; height: 32px; }
+  .mode-pill { font-size: 11px; }
+  #main-content { padding: 21px 18px 30px; }
+  h1, .page-heading h1 { font-size: 26px; }
+  .page-heading { margin-bottom: 20px; gap: 12px; }
+  .page-heading p { font-size: 13px; }
+  .page-heading>.button { min-height: 40px; padding: 8px 13px; font-size: 13px; }
+  .eyebrow { font-size: 10px; margin-bottom: 7px; }
+  .button { min-height: 44px; font-size: 14px; padding: 10px 14px; }
+  .button.small { min-height: 40px; font-size: 12px; }
+  .field input, .field select, .field textarea { font-size: 16px; min-height: 44px; }
+  .panel { padding: 20px; }
+  .panel-heading h2, .panel-heading h3 { font-size: 19px; }
+  .metric-grid { gap: 12px; }
+  .metric-card { padding: 16px; }
+  .metric-card strong { font-size: 30px; }
+  .metric-card small { font-size: 12px; }
+  .metric-card label { font-size: 12px; }
+  .insights-grid { grid-template-columns: minmax(0,1fr); }
+  .chart-container { height: 245px; }
+  .settings-layout .panel { margin-bottom: 18px; }
+  .settings-layout .button-group { gap: 8px; }
+  .data-action { flex-wrap: wrap; }
+  .data-action .button { font-size: 12px; min-height: 40px; }
+  .mobile-nav { padding-top: 9px; background: var(--surface); box-shadow: 0 -3px 16px #243b3007; }
+  .mobile-nav a { font-size: 11px; gap: 5px; padding: 4px 0; min-height: 46px; }
+  .mobile-nav a.active { color: var(--green); }
+  .mobile-nav a.active svg { background: var(--green-soft); box-shadow: 0 0 0 5px var(--green-soft); border-radius: 3px; }
+  .app-footer { font-size: 11px; padding: 18px 18px calc(92px + env(safe-area-inset-bottom)); gap: 5px; }
+  .dialog-heading { padding: 16px 20px; }
+  .dialog-body { padding: 20px; }
+  .dialog-actions .button { font-size: 13px; min-height: 44px; }
+  .toast-stack { bottom: calc(92px + env(safe-area-inset-bottom)); }
+  .toast { font-size: 13px; }
+}
+@media screen and (max-height: 720px) and (min-width: 741px) {
+  .sidebar-note { margin-top: 20px; padding-top: 16px; }
+  .sidebar-note .tiny-star { display: none; }
+  .brand { margin-bottom: 26px; }
+}

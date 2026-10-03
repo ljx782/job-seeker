@@ -1,0 +1,20 @@
+# Full frontend + serverless backend. See DEPLOY-NETLIFY.md before publishing.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["@netlify/blobs", "cheerio", "docx", "imapflow", "mailparser", "mammoth", "nodemailer", "pdfjs-dist"]
+  included_files = ["skills/resume-tailor/SKILL.md", "node_modules/pdfjs-dist/package.json", "node_modules/pdfjs-dist/legacy/build/pdf.worker.mjs", "node_modules/pdfjs-dist/cmaps/**", "node_modules/pdfjs-dist/standard_fonts/**"]
+
+# The app uses #/ routes; /api/* belongs to the api function, not index.html.
+[dev]
+  command = "node scripts/preview-static.mjs"
+  targetPort = 4181
+  port = 8888
+  autoLaunch = false

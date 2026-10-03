@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Jobseeker team avatar</title>
+  <desc id="desc">A cream J and northeast compass arrow on a forest green emblem, with the Jobseeker wordmark on a warm golden background.</desc>
+  <rect width="1024" height="1024" fill="#EFB449"/>
+  <circle cx="512" cy="424" r="302" fill="#243B30"/>
+  <circle cx="512" cy="424" r="273" fill="none" stroke="#EFB449" stroke-opacity=".24" stroke-width="2"/>
+  <g fill="none" stroke="#EFB449" stroke-width="5" stroke-linecap="round">
+    <path d="M512 162v16M758 424h16M512 670v16M250 424h16"/>
+  </g>
+  <path d="M370 486c0 63 40 105 103 105s103-42 103-105V355" fill="none" stroke="#FBF8EF" stroke-width="74" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m670 231-38 186-61-68-95-39Z" fill="#FBF8EF" stroke="#243B30" stroke-width="12" stroke-linejoin="round"/>
+  <path d="m670 231-99 118 61 68Z" fill="#EFB449"/>
+  <text x="512" y="855" text-anchor="middle" fill="#243B30" font-family="Georgia,serif" font-weight="700" font-size="104" letter-spacing="-4">Jobseeker</text>
+</svg>

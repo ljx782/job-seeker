@@ -1,0 +1,179 @@
+/* Discovery keeps the search brief so opportunities stay in view. */
+@media screen {
+  .discovery-workspace { min-width: 0; }
+  .discovery-workspace .discovery-heading { margin-bottom: 18px; }
+  .discovery-heading .eyebrow { font-size: 10px; margin-bottom: 6px; }
+  .discovery-heading h1 { margin-bottom: 5px; }
+  .discovery-heading p { font-size: 14px; }
+  .discovery-workspace .search-panel { padding: 16px 18px 0; margin-bottom: 22px; border-radius: 12px; box-shadow: none; }
+  .discovery-workspace .search-panel-top { margin-bottom: 13px; gap: 12px; flex-wrap: wrap; }
+  .discovery-workspace .discovery-mode { display: inline-flex; gap: 3px; padding: 3px; margin: 0; border-radius: 7px; background: var(--soft); }
+  .discovery-workspace .discovery-mode button { display: inline-flex; gap: 7px; align-items: center; min-height: 32px; padding: 5px 11px; font-size: 13px; border: 0; border-radius: 5px; color: var(--muted); }
+  .discovery-workspace .discovery-mode button.active { background: var(--surface); color: var(--green); box-shadow: 0 1px 5px #26362912; font-weight: 600; }
+  .discovery-workspace .search-mode-note { color: var(--muted); font-size: 12px; }
+  .discovery-workspace .search-fields { min-height: 62px; padding: 6px; gap: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 8px; flex-wrap: nowrap; }
+  .discovery-workspace .search-field { min-width: 0; padding: 0 14px; gap: 10px; }
+  .discovery-workspace .search-field>svg { display: block; width: 18px; color: var(--green); }
+  .discovery-workspace .search-field small { font-size: 12px; margin-bottom: 2px; }
+  .discovery-workspace .search-field input, .discovery-workspace .search-field select { font-size: 14px; height: 25px; min-height: 25px; }
+  .discovery-workspace .position-field { flex: 1; }
+  .discovery-workspace .city-field { flex: 0 0 180px; }
+  .discovery-workspace .search-submit { min-height: 46px; height: 46px; font-size: 14px; padding: 10px 20px; }
+  .discovery-workspace .search-options-row { display: flex; align-items: center; justify-content: space-between; gap: 0 16px; flex-wrap: wrap; }
+  .discovery-workspace .search-hints { min-height: 44px; padding: 7px 0; gap: 12px; font-size: 12px; }
+  .discovery-workspace .text-chip { font-size: 12px; line-height: 1.8; color: var(--green); padding: 2px 0; }
+  .search-refinements { min-width: 0; }
+  .search-refinements summary { display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; font-size: 12px; color: var(--green); padding: 9px 0; min-height: 38px; }
+  .search-refinements summary::-webkit-details-marker { display: none; }
+  .search-refinements summary>span { color: var(--muted); }
+  .search-refinements[open] { width: 100%; border-top: 1px solid var(--line); }
+  .search-refinements[open] summary>svg:last-child { transform: rotate(180deg); }
+  .discovery-workspace .discovery-extras { grid-template-columns: 1fr 1fr 135px; gap: 12px; margin: 0 0 14px; align-items: start; }
+  .discovery-workspace .discovery-extras .field { font-size: 12px; }
+  .discovery-workspace .discovery-extras input, .discovery-workspace .discovery-extras select { font-size: 14px; padding: 8px 10px; }
+  .discovery-workspace .discovery-extras p { grid-column: 1/-1; font-size: 12px; margin: 0; }
+  .discovery-workspace .discovery-layout { grid-template-columns: minmax(0,1fr) 230px; gap: 22px; align-items: start; }
+  .discovery-workspace .results-toolbar { gap: 12px; min-height: 39px; }
+  .discovery-workspace .tab-list { gap: 22px; }
+  .discovery-workspace .tab { font-size: 14px; padding: 0 0 11px; }
+  .discovery-workspace .tab span { font-size: 12px; border-radius: 4px; padding: 2px 6px; background: var(--green-soft); color: var(--green); }
+  .discovery-workspace .sort-label { padding-bottom: 10px; }
+  .discovery-workspace .sort-label select { width: 105px; font-size: 12px; }
+  .discovery-workspace .filter-row { padding: 12px 0 10px; gap: 8px; }
+  .discovery-workspace .filter-row select { padding: 6px 8px; font-size: 12px; border-radius: 5px; max-width: 130px; min-height: 33px; }
+  .discovery-workspace .checkbox-label { font-size: 12px; gap: 5px; }
+  .discovery-workspace .checkbox-label input { width: 15px; height: 15px; }
+  .discovery-workspace .filter-row>.text-button { font-size: 12px; min-height: 33px; }
+  .discovery-workspace .results-meta { font-size: 12px; margin: 0 0 13px; flex-wrap: wrap; gap: 4px 10px; }
+  .discovery-workspace .results-meta strong { font-weight: 600; }
+  .discovery-workspace .results-meta .muted { font-size: 12px; color: var(--muted); }
+  .discovery-workspace .demo-caption { font-size: 12px; color: var(--muted); }
+  .discovery-workspace .job-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+  .discovery-workspace .job-card { padding: 18px 18px 0; border-radius: 10px; box-shadow: none; }
+  .discovery-workspace .job-card:hover { transform: translateY(-2px); border-color: #a9b99e; box-shadow: 0 6px 18px #243b3009; }
+  .discovery-workspace .job-card-top { gap: 10px; margin-bottom: 14px; }
+  .discovery-workspace .company-mark { width: 39px; height: 39px; font-size: 22px; border-radius: 9px; }
+  .discovery-workspace .company-info strong { font-size: 14px; color: var(--ink); }
+  .discovery-workspace .company-info span { font-size: 12px; margin-top: 1px; color: var(--muted); }
+  .discovery-workspace .bookmark-button { color: var(--muted); padding: 7px; margin-right: -7px; }
+  .discovery-workspace .bookmark-button.saved { color: var(--accent-dark); }
+  .discovery-workspace .bookmark-button svg { width: 19px; height: 19px; }
+  .discovery-workspace .job-title h3 { font-size: 17px; line-height: 1.5; margin-bottom: 7px; min-height: 0; letter-spacing: 0; }
+  .discovery-workspace .job-pay { margin-bottom: 11px; }
+  .discovery-workspace .job-pay strong { color: var(--accent-dark); font-size: 20px; font-weight: 600; }
+  .discovery-workspace .job-pay span { font-size: 12px; }
+  .discovery-workspace .job-metadata { font-size: 12px; gap: 7px; margin-bottom: 13px; flex-wrap: wrap; }
+  .discovery-workspace .job-metadata>span+span { padding-left: 7px; }
+  .discovery-workspace .job-metadata svg { width: 14px; height: 14px; }
+  .discovery-workspace .job-skill-tags { gap: 6px; min-height: 0; margin-bottom: 15px; }
+  .discovery-workspace .job-skill-tags>span { font-size: 12px; padding: 3px 7px; border-radius: 4px; color: var(--muted); }
+  .discovery-workspace .job-skill-tags>span.skill-match { background: var(--green-soft); color: var(--green); }
+  .discovery-workspace .job-card-bottom { gap: 6px; padding: 10px 0; min-height: 43px; }
+  .discovery-workspace .match-badge { font: 12px var(--sans); color: var(--muted); gap: 4px; }
+  .discovery-workspace .match-badge.high { color: var(--green); }
+  .discovery-workspace .match-badge svg { width: 13px; height: 13px; }
+  .discovery-workspace .source-label { font-size: 12px; color: var(--muted); }
+  .discovery-workspace .card-detail { color: var(--green); padding: 4px 0 4px 5px; }
+  .discovery-workspace .card-detail svg { width: 18px; height: 18px; }
+  .discovery-workspace .load-more { margin-top: 20px; }
+  .discovery-workspace .load-more .button { font-size: 13px; }
+  .discovery-workspace .load-more small, .discovery-workspace .end-note { font-size: 12px; color: var(--muted); }
+  .discovery-workspace .notebook-card { padding: 18px; margin-bottom: 15px; border-radius: 10px; box-shadow: none; }
+  .discovery-workspace .profile-card { background: var(--green-soft); }
+  .discovery-workspace .card-eyebrow { font-size: 13px; color: var(--green); }
+  .discovery-workspace .profile-completion { margin: 18px 0 15px; gap: 11px; }
+  .discovery-workspace .progress-ring { width: 50px; height: 50px; }
+  .discovery-workspace .progress-ring>span { width: 42px; height: 42px; font-size: 18px; background: var(--green-soft); color: var(--green); }
+  .discovery-workspace .progress-ring small { font-size: 12px; }
+  .discovery-workspace .profile-completion h3 { font-size: 14px; margin-bottom: 3px; }
+  .discovery-workspace .profile-completion p { font-size: 12px; white-space: normal; line-height: 1.5; }
+  .discovery-workspace .mini-tags { gap: 5px; }
+  .discovery-workspace .mini-tags span { font-size: 12px; padding: 3px 7px; color: var(--green); background: var(--surface); }
+  .discovery-workspace .aside-link { font-size: 13px; padding-top: 12px; margin-top: 13px; }
+  .discovery-workspace .journey-stats { margin-top: 17px; gap: 10px; }
+  .discovery-workspace .journey-stats>div+div { padding-left: 12px; }
+  .discovery-workspace .journey-stats strong { font-size: 27px; color: var(--green); margin-bottom: 4px; }
+  .discovery-workspace .journey-stats span { font-size: 12px; }
+  .discovery-note { padding: 12px 18px 16px; color: var(--green); }
+  .discovery-note-mark { color: #9eaa84; font-size: 28px; }
+  .discovery-note p { font: 17px/1.8 var(--serif); margin: 6px 0 9px; }
+  .discovery-note small { color: var(--muted); font: italic 13px Georgia,serif; }
+  .discovery-workspace .local-note { font-size: 12px; color: var(--muted); justify-content: flex-start; padding: 0 18px; }
+  .discovery-workspace .discovery-welcome { display: flex; align-items: center; gap: 16px; margin: 0; padding: 26px 22px; border-radius: 10px; border-color: var(--line); }
+  .discovery-welcome>svg { color: var(--green); }
+  .discovery-workspace .discovery-welcome h3 { font-size: 19px; margin-bottom: 6px; }
+  .discovery-workspace .discovery-welcome p { font-size: 14px; }
+  .discovery-workspace .search-report { margin: 0 0 14px; padding: 0; background: var(--green-soft); border-radius: 7px; }
+  .discovery-workspace .search-report>summary { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; font-size: 12px; padding: 11px 13px; color: var(--green); cursor: pointer; }
+  .search-report>summary>span { display: inline-flex; align-items: center; gap: 6px; }
+  .search-report>summary>time { color: var(--muted); }
+  .search-report-body { border-top: 1px solid var(--line); padding: 13px; }
+  .search-report-body>p { font-size: 13px; margin: 12px 0; }
+  .discovery-workspace .search-stages { font-size: 12px; gap: 8px; }
+  .discovery-workspace .search-stages b { font-size: 15px; }
+  .discovery-workspace .search-report ul { font-size: 13px; margin-bottom: 0; }
+  .discovery-workspace .search-report li small { font-size: 12px; }
+  .discovery-workspace .agent-running { margin: 0 0 18px; padding: 16px 18px; border-radius: 8px; }
+  .discovery-workspace .agent-running strong { font-size: 14px; }
+  .discovery-workspace .agent-running small { font-size: 12px; line-height: 1.6; }
+}
+
+@media screen and (max-width: 1270px) {
+  .discovery-workspace .discovery-layout { grid-template-columns: minmax(0,1fr) 220px; gap: 18px; }
+  .discovery-workspace .tab-list { gap: 16px; }
+  .discovery-workspace .sort-label>svg { display: none; }
+  .discovery-workspace .results-meta .muted { display: none; }
+  .search-refinements summary>span { display: none; }
+}
+@media screen and (max-width: 1120px) {
+  .discovery-workspace .discovery-aside { display: none; }
+  .discovery-workspace .discovery-layout { display: block; }
+  .discovery-workspace .search-mode-note { display: none; }
+  .discovery-workspace .city-field { flex-basis: 155px; }
+}
+@media screen and (max-width: 740px) {
+  .discovery-workspace .discovery-heading { gap: 12px; margin-bottom: 17px; }
+  .discovery-heading .eyebrow { font-size: 10px; }
+  .discovery-workspace .discovery-heading h1 { font-size: 28px; }
+  .discovery-workspace .discovery-heading p { font-size: 13px; }
+  .discovery-workspace .discovery-heading>.button { font-size: 12px; min-height: 36px; padding: 7px 11px; }
+  .discovery-workspace .search-panel { padding: 12px 13px 0; margin-bottom: 20px; }
+  .discovery-workspace .search-panel-top { margin-bottom: 12px; }
+  .discovery-workspace .discovery-mode { width: 100%; }
+  .discovery-workspace .discovery-mode button { justify-content: center; flex: 1; padding: 6px 8px; font-size: 13px; }
+  .discovery-workspace .search-fields { border: 0; background: none; padding: 0; flex-wrap: wrap; gap: 9px; }
+  .discovery-workspace .search-field { padding: 8px 11px; border: 1px solid var(--line); border-radius: 7px; min-height: 56px; background: var(--paper); }
+  .discovery-workspace .position-field { flex: 1 1 100%; }
+  .discovery-workspace .city-field { flex: 1 1 0; }
+  .discovery-workspace .search-submit { width: auto; flex: 1 1 0; height: 56px; min-height: 56px; margin: 0; padding: 9px 10px; font-size: 14px; }
+  .discovery-workspace .search-hints { gap: 7px 12px; min-height: 0; padding: 11px 0 3px; }
+  .discovery-workspace .search-hints>span:first-child { display: none; }
+  .discovery-workspace .text-chip { font-size: 12px; }
+  .search-refinements { width: 100%; }
+  .search-refinements summary { padding: 7px 0 10px; justify-content: flex-end; font-size: 12px; }
+  .search-refinements summary>span { display: inline; }
+  .search-refinements[open] { margin-top: 7px; }
+  .discovery-workspace .discovery-extras { grid-template-columns: 1fr; gap: 10px; }
+  .discovery-workspace .discovery-extras p { grid-column: auto; }
+  .discovery-workspace .results-toolbar { flex-wrap: wrap; gap: 8px; align-items: center; }
+  .discovery-workspace .tab-list { gap: 18px; flex: 1 1 100%; }
+  .discovery-workspace .tab { font-size: 14px; padding-bottom: 8px; }
+  .discovery-workspace .sort-label { padding: 1px 0 9px; margin-left: auto; }
+  .discovery-workspace .sort-label select { font-size: 12px; }
+  .discovery-workspace .filter-row { gap: 7px; padding: 11px 0; }
+  .discovery-workspace .filter-row select { max-width: 125px; font-size: 12px; padding: 6px 7px; }
+  .discovery-workspace .filter-row>.text-button { margin-left: auto; }
+  .discovery-workspace .results-meta { font-size: 12px; }
+  .discovery-workspace .job-grid { grid-template-columns: 1fr; gap: 13px; }
+  .discovery-workspace .job-card { padding: 17px 18px 0; }
+  .discovery-workspace .job-title h3 { font-size: 18px; }
+  .discovery-workspace .company-info strong { font-size: 14px; }
+  .discovery-workspace .company-info span, .discovery-workspace .job-metadata,
+  .discovery-workspace .job-skill-tags>span, .discovery-workspace .source-label,
+  .discovery-workspace .match-badge { font-size: 12px; }
+  .discovery-workspace .job-metadata { gap: 8px; }
+  .discovery-workspace .job-card-bottom { padding: 11px 0; }
+  .discovery-workspace .discovery-welcome { padding: 22px 16px; align-items: flex-start; gap: 12px; }
+  .discovery-workspace .discovery-welcome h3 { font-size: 18px; }
+  .discovery-workspace .discovery-welcome p { font-size: 13px; }
+}

@@ -1,0 +1,105 @@
+.tracker-page { min-width: 0; }
+.tracker-page .tracker-heading { margin-bottom: 22px; gap: 20px; }
+.tracker-page .tracker-heading h1 { font-size: clamp(25px, 2.3vw, 31px); margin-bottom: 5px; }
+.tracker-page .tracker-heading .eyebrow { margin-bottom: 6px; font-size: 10px; color: var(--green); }
+.tracker-page .tracker-heading p { font-size: 14px; letter-spacing: 0; }
+.tracker-page .tracker-heading .button { min-height: 40px; font-size: 13px; padding: 9px 14px; }
+.tracker-page .tracker-stage-overview { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin-bottom: 16px; }
+.tracker-page .tracker-stage { min-width: 0; border: 1px solid var(--line); border-radius: 9px; padding: 12px 14px 10px; text-align: left; background: var(--surface); transition: background .15s, border-color .15s; }
+.tracker-page .tracker-stage:hover { background: var(--soft); border-color: var(--stage-color); }
+.tracker-page .tracker-stage > span { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.tracker-page .tracker-stage i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--stage-color); flex-shrink: 0; }
+.tracker-page .tracker-stage > strong { display: block; font: 500 26px/1.35 var(--mono); margin-top: 5px; color: var(--ink); }
+.tracker-page .tracker-stage strong small { font: 12px var(--sans); color: var(--muted); margin-left: 7px; }
+.tracker-page .tracker-stage.priority-stage { background: var(--green-soft); }
+.tracker-page .tracker-stage[data-jump-stage="interview"] { background: var(--yellow); }
+.tracker-page .tracker-utilities { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin-bottom: 20px; }
+.tracker-page .tracker-utilities.has-reminders { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
+.tracker-page .reminder-strip, .tracker-page .mail-tracker-strip { padding: 11px 14px; min-height: 60px; margin: 0; gap: 10px; border-radius: 8px; flex-wrap: nowrap; }
+.tracker-page .reminder-strip > div, .tracker-page .mail-tracker-strip > div { min-width: 0; flex: 1; }
+.tracker-page .reminder-strip strong, .tracker-page .mail-tracker-strip strong { display: block; font-size: 13px; font-weight: 600; }
+.tracker-page .reminder-strip span, .tracker-page .mail-tracker-strip span { display: block; margin-top: 2px; font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tracker-page .reminder-strip .text-button, .tracker-page .mail-tracker-strip .text-button { font-size: 12px; flex-shrink: 0; white-space: nowrap; }
+.tracker-page .mail-tracker-strip .button { font-size: 12px; padding: 6px 10px; min-height: 33px; flex-shrink: 0; }
+.tracker-page .tracker-toolbar { margin-bottom: 12px; gap: 12px; }
+.tracker-page .view-switch { border: 1px solid var(--line); border-radius: 7px; padding: 3px; }
+.tracker-page .view-switch button { font-size: 13px; padding: 7px 13px; border-radius: 4px; min-height: 35px; white-space: nowrap; }
+.tracker-page .tracker-search-field { display: flex; align-items: center; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); padding: 0 12px; gap: 8px; color: var(--muted); width: min(320px, 42%); min-width: 180px; }
+.tracker-page .tracker-search-field:focus-within { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tracker-page .tracker-search-field input { width: 100%; border: 0; background: transparent; font-size: 14px; padding: 10px 0; outline: none; }
+.tracker-page .tracker-board-options { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; color: var(--muted); font-size: 12px; }
+.tracker-page .tracker-board-options[hidden] { display: none; }
+.tracker-page .tracker-board-options > div { display: flex; align-items: center; gap: 18px; }
+.tracker-page .tracker-board-options label { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+.tracker-page .tracker-board-options input { accent-color: var(--green); width: 14px; height: 14px; margin: 0; }
+.tracker-page #tracker-content { min-width: 0; }
+.tracker-page .board-scroll { padding: 2px 2px 14px; margin: -2px -2px 0; max-width: calc(100% + 4px); overscroll-behavior-x: contain; scrollbar-width: auto; scrollbar-color: #b8c2ae var(--soft); scroll-snap-type: x proximity; }
+.tracker-page .kanban-board { grid-template-columns: repeat(var(--visible-stage-count, 7), minmax(238px, 1fr)); min-height: 375px; gap: 12px; }
+.tracker-page .board-column { background: var(--soft); border-radius: 9px; padding: 10px; min-width: 0; scroll-snap-align: start; }
+.tracker-page .board-column:focus { outline: 2px solid var(--accent); outline-offset: -2px; }
+.tracker-page .column-heading { font-size: 14px; padding: 0 3px 11px; gap: 8px; min-height: 36px; }
+.tracker-page .column-heading strong { font-weight: 600; }
+.tracker-page .column-heading small { font: 12px var(--mono); border-radius: 4px; background: var(--surface); padding: 2px 6px; }
+.tracker-page .column-heading button { display: grid; place-items: center; min-width: 28px; min-height: 28px; border-radius: 5px; }
+.tracker-page .column-heading button:hover { background: var(--surface); color: var(--green); }
+.tracker-page .application-card { padding: 14px; border-radius: 7px; margin-bottom: 10px; box-shadow: 0 2px 4px #28332e03; }
+.tracker-page .application-card:hover { border-color: color-mix(in srgb, var(--green) 40%, var(--line)); }
+.tracker-page .application-card > button { display: block; min-width: 0; }
+.tracker-page .application-company { font-size: 13px; line-height: 1.45; gap: 9px; color: var(--ink); min-width: 0; }
+.tracker-page .application-company > span { min-width: 0; overflow-wrap: anywhere; }
+.tracker-page .application-company .company-mark { width: 31px; height: 31px; flex-shrink: 0; border-radius: 7px; }
+.tracker-page .application-card h3 { font-size: 14px; font-weight: 600; line-height: 1.55; margin: 12px 0 6px; overflow-wrap: anywhere; }
+.tracker-page .application-card p { font-size: 12px; line-height: 1.7; margin: 0 0 11px; overflow-wrap: anywhere; }
+.tracker-page .application-card .application-deadline { padding: 6px 8px; background: var(--yellow); color: var(--accent-dark); border-radius: 5px; font-size: 12px; }
+.tracker-page .application-card-footer { font-size: 12px; gap: 6px; padding-top: 11px; }
+.tracker-page .application-card select { font-size: 12px; max-width: 108px; padding: 5px 7px; min-height: 31px; }
+.tracker-page .column-empty { font-size: 12px; padding: 25px 6px; color: var(--muted); line-height: 1.9; }
+.tracker-page .tracker-footnote { margin: 8px 0 0; font-size: 12px; display: flex; align-items: flex-start; gap: 7px; }
+.tracker-page .tracker-footnote svg { margin-top: 3px; }
+.tracker-page .data-table-wrap { max-width: 100%; border-radius: 8px; overscroll-behavior-x: contain; }
+.tracker-page .data-table { font-size: 14px; }
+.tracker-page .data-table th, .tracker-page .data-table td small, .tracker-page .data-table select, .tracker-page .data-table .text-button { font-size: 12px; }
+.tracker-page .data-table th { padding: 13px 16px; }
+.tracker-page .data-table td { padding: 16px; }
+.tracker-page .data-table tbody tr:hover { background: var(--green-soft); }
+@media (max-width: 1180px) {
+  .tracker-page .tracker-heading { align-items: flex-start; flex-wrap: wrap; gap: 13px; }
+  .tracker-page .tracker-utilities.has-reminders { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .tracker-page .tracker-stage { padding: 10px 9px; }
+  .tracker-page .reminder-strip > div { display: flex; gap: 12px; align-items: center; }
+  .tracker-page .reminder-strip strong { flex-shrink: 0; }
+  .tracker-page .reminder-strip span { margin-top: 0; }
+}
+@media (max-width: 740px) {
+  .tracker-page .tracker-heading { margin-bottom: 18px; }
+  .tracker-page .tracker-heading h1 { font-size: 25px; }
+  .tracker-page .tracker-heading p { font-size: 13px; }
+  .tracker-page .tracker-heading .button-group { width: 100%; }
+  .tracker-page .tracker-heading .button { min-height: 41px; }
+  .tracker-page .tracker-heading .button.primary { flex: 1; }
+  .tracker-page .tracker-stage-overview { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 7px; margin-bottom: 14px; }
+  .tracker-page .tracker-stage { padding: 10px; }
+  .tracker-page .tracker-stage > span { gap: 5px; font-size: 12px; }
+  .tracker-page .tracker-stage > strong { font-size: 23px; margin-top: 5px; }
+  .tracker-page .tracker-stage strong small { display: none; }
+  .tracker-page .tracker-utilities { margin-bottom: 15px; }
+  .tracker-page .mail-tracker-strip, .tracker-page .reminder-strip { gap: 8px; padding: 10px 12px; }
+  .tracker-page .reminder-strip > div { display: block; }
+  .tracker-page .reminder-strip span { margin-top: 2px; }
+  .tracker-page .mail-tracker-strip > svg { display: none; }
+  .tracker-page .mail-tracker-strip .button { padding: 6px 8px; }
+  .tracker-page .tracker-toolbar { flex-direction: column; align-items: stretch; gap: 10px; }
+  .tracker-page .view-switch { width: 100%; justify-content: space-between; }
+  .tracker-page .view-switch button { flex: 1; justify-content: center; padding: 7px 9px; min-height: 37px; }
+  .tracker-page .tracker-search-field { width: 100%; min-width: 0; }
+  .tracker-page .tracker-search-field input { font-size: 16px; }
+  .tracker-page .tracker-board-options { flex-wrap: wrap; gap: 9px; }
+  .tracker-page .tracker-board-options > div { gap: 18px; }
+  .tracker-page .tracker-board-options label { min-height: 28px; }
+  .tracker-page .tracker-board-options input { width: 16px; height: 16px; }
+  .tracker-page .kanban-board { grid-template-columns: repeat(var(--visible-stage-count, 7), minmax(266px, 1fr)); min-height: 330px; gap: 10px; }
+  .tracker-page .application-card { padding: 14px; }
+  .tracker-page .application-card select { min-height: 36px; }
+  .tracker-page .column-heading button { min-width: 32px; min-height: 32px; }
+  .tracker-page .tracker-footnote { line-height: 1.8; }
+}

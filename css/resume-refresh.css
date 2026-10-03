@@ -1,0 +1,222 @@
+/* The studio's working surface is independent of exported A4 documents. */
+@media screen {
+  .studio-tabs {
+    gap: 5px;
+    margin: 0 0 12px;
+    padding: 0 0 6px;
+  }
+  .studio-tabs button { min-height: 42px; padding: 8px 15px; font-size: 14px; }
+  .studio-tabs button.active { box-shadow: inset 0 0 0 1px var(--line); }
+  .resume-workspace { min-width: 0; }
+  .resume-workspace .resume-heading { margin-bottom: 12px; align-items: center; }
+  .resume-workspace .resume-heading h1 { margin: 0 0 6px; font-size: clamp(26px, 2.2vw, 32px); line-height: 1.3; }
+  .resume-workspace .resume-heading > .button { min-height: 42px; font-size: 13px; }
+  .resume-workflow { display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; color: var(--muted); }
+  .resume-workflow li { display: flex; align-items: center; gap: 7px; font-size: 12px; }
+  .resume-workflow b { color: var(--green); font: 12px var(--mono); }
+  .resume-workflow li + li::before { content: '›'; margin-right: 6px; color: var(--muted); }
+  .resume-workspace .sample-notice { min-height: 42px; padding: 0 12px; gap: 12px; margin: 0 0 8px; background: var(--yellow); border: 0; border-radius: 6px; font-size: 12px; }
+  .resume-workspace .sample-notice strong { color: var(--ink); font-weight: 600; }
+  .resume-workspace .sample-notice .text-button { min-height: 40px; font-size: 12px; }
+  .resume-workspace .resume-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) minmax(160px, .45fr) auto; align-items: end; gap: 14px; padding: 10px 14px; margin: 0 0 8px; border-radius: 10px; }
+  .resume-workspace .resume-toolbar .field { min-width: 0; margin: 0; font-size: 12px; gap: 5px; }
+  .resume-workspace .resume-toolbar select { min-height: 42px; font-size: 14px; }
+  .resume-workspace .resume-toolbar > .button { min-height: 42px; padding: 10px 18px; font-size: 14px; }
+  .resume-workspace .resume-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; margin-bottom: 12px; }
+  .resume-workspace .technical-readiness,
+  .resume-workspace .generation-note { padding: 0 14px; margin: 0; border: 1px solid var(--line); border-radius: 7px; background: var(--surface); min-width: 0; }
+  .resume-workspace .technical-readiness > summary,
+  .resume-workspace .generation-note > summary { display: flex; align-items: center; justify-content: flex-start; gap: 8px; min-height: 42px; margin: 0; color: var(--green); cursor: pointer; font-size: 13px; list-style: none; }
+  .resume-workspace .resume-options summary::-webkit-details-marker { display: none; }
+  .resume-workspace .resume-options summary::after { content: '+'; margin-left: auto; font-size: 18px; line-height: 1; }
+  .resume-workspace .resume-options details[open] > summary::after { content: '−'; }
+  .resume-workspace .resume-options summary strong { font-weight: 500; }
+  .resume-workspace .resume-options summary span { color: var(--muted); font-size: 12px; }
+  .resume-workspace .technical-checks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 4px 0 12px; }
+  .resume-workspace .technical-checks button { min-height: 42px; font-size: 12px; padding: 8px; }
+  .resume-workspace .technical-checks small { font-size: 12px; }
+  .resume-workspace .technical-readiness > p { font-size: 12px; margin: 0 0 14px; }
+  .resume-workspace .generation-note .field { margin-top: 4px; margin-bottom: 10px; }
+  .resume-workspace .generation-note p { margin-bottom: 14px; }
+  .resume-pane-links { display: none; }
+  .resume-workspace .resume-layout { display: grid; grid-template-columns: minmax(330px, .9fr) minmax(390px, 1.1fr); gap: 24px; align-items: start; }
+  .resume-workspace .editor-panel { padding: 0; border-radius: 10px; overflow: hidden; min-width: 0; }
+  .resume-workspace .workspace-panel-heading,
+  .resume-workspace .preview-heading { min-height: 60px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 18px; margin: 0; }
+  .resume-workspace .workspace-panel-heading { background: var(--green-soft); border-bottom: 1px solid var(--line); }
+  .resume-workspace .workspace-panel-heading h2,
+  .resume-workspace .preview-heading h2 { margin: 0; font: 600 18px/1.4 var(--serif); letter-spacing: 0; }
+  .resume-workspace .workspace-panel-heading > span { display: flex; align-items: center; gap: 5px; font-size: 12px; color: var(--green); }
+  .resume-workspace .editor-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 10px; gap: 4px; background: var(--surface); }
+  .resume-workspace .editor-tabs button { min-height: 40px; padding: 7px 3px; font-size: 12px; line-height: 1.5; }
+  .resume-workspace .editor-tabs button.active { border-color: transparent; background: var(--green-soft); }
+  .resume-workspace .editor-form { padding: 20px; }
+  .resume-workspace .editor-section-title h3 { margin: 0; font-size: 20px; }
+  .resume-workspace .editor-section-title > span { font-size: 12px; }
+  .resume-workspace .editor-form > .caption { font-size: 12px; line-height: 1.7; margin: 8px 0 18px; }
+  .resume-workspace .field { font-size: 13px; gap: 7px; margin-bottom: 16px; }
+  .resume-workspace .field input,
+  .resume-workspace .field select,
+  .resume-workspace .field textarea { min-height: 42px; font-size: 14px; padding: 10px 11px; border-radius: 6px; }
+  .resume-workspace .field textarea { line-height: 1.7; }
+  .resume-workspace .field small,
+  .resume-workspace .caption,
+  .resume-workspace .editor-module-empty small,
+  .resume-workspace .resume-filename-note,
+  .resume-workspace .legacy-skill-input summary { font-size: 12px; }
+  .resume-workspace .form-grid { gap: 0 14px; }
+  .resume-workspace .repeat-group { padding: 16px 14px 0; border-radius: 7px; }
+  .resume-workspace .repeat-heading { font-size: 14px; gap: 12px; margin-bottom: 14px; }
+  .resume-workspace .repeat-heading .text-button { font-size: 12px; }
+  .resume-workspace .editor-form button,
+  .resume-workspace .preview-panel .button { min-height: 40px; font-size: 12px; }
+  .resume-workspace .editor-step-actions { align-items: center; gap: 12px; padding-top: 12px; }
+  .resume-workspace .preview-panel { border: 1px solid var(--line); background: var(--soft); padding: 0 16px 16px; border-radius: 10px; min-width: 0; }
+  .resume-workspace .preview-heading { padding: 10px 0; flex-wrap: nowrap; }
+  .resume-workspace .preview-heading .button { padding: 7px 11px; }
+  .resume-workspace .preview-controls { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+  .resume-workspace .preview-switch { display: flex; gap: 3px; margin: 0; padding: 3px; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); }
+  .resume-workspace .preview-switch button { min-height: 36px; padding: 6px 10px; border-radius: 4px; font-size: 12px; text-decoration: none; }
+  .resume-workspace .preview-switch button[aria-pressed=true] { color: var(--green); background: var(--surface); box-shadow: 0 1px 3px #28332e12; font-weight: 600; }
+  .resume-workspace .export-actions { gap: 5px; margin-left: auto; }
+  .resume-workspace .export-actions .button { padding: 6px 10px; min-height: 40px; }
+  .resume-workspace .review-summary { flex-wrap: wrap; font-size: 12px; padding: 9px 12px; }
+  .resume-workspace .review-summary .text-button { font-size: 12px; min-height: 32px; }
+  .resume-workspace .resume-paper { padding: 28px; box-shadow: 0 5px 16px #28332e08; }
+  .resume-workspace .resume-paper.template-design .resume-person { margin: -28px -28px 22px; }
+  .resume-workspace .resume-paper::before { display: none; }
+  .resume-workspace .resume-paper .resume-contact { font-size: 12px; color: #626b60; }
+  .resume-workspace .resume-paper .resume-role { font-size: 14px; color: #627159; }
+  .resume-workspace .resume-paper .resume-section h3 { font-size: 14px; letter-spacing: 1px; }
+  .resume-workspace .resume-paper .resume-fact { font-size: 14px; color: #4e594e; line-height: 1.85; }
+  .resume-workspace .resume-paper .source-row { font-size: 12px; color: #826b35; gap: 5px; }
+  .resume-workspace .resume-paper .source-chip { font-size: 12px; color: #626b58; }
+  .resume-workspace .resume-paper .source-chip.user { color: #557247; }
+  .resume-workspace .resume-paper .fact-actions { gap: 10px; flex-wrap: wrap; }
+  .resume-workspace .resume-paper .fact-actions button { min-height: 36px; font-size: 12px; }
+  .resume-workspace .resume-paper .rewrite-original { font-size: 12px; }
+  .resume-workspace .resume-paper .rewrite-label { font-size: 12px; color: #826b35; }
+  .resume-workspace .resume-export-note { display: flex; align-items: flex-start; gap: 6px; line-height: 1.7; margin: 15px 0; }
+  .resume-workspace .resume-export-note svg { margin-top: 4px; }
+  .resume-workspace .resume-delivery-bar { padding: 14px; margin: 0; gap: 10px; }
+  .resume-workspace .resume-delivery-bar strong { font-size: 14px; }
+  .resume-workspace .resume-delivery-bar small { font-size: 12px; margin-top: 3px; }
+  .resume-workspace #resume-editor-panel,
+  .resume-workspace #resume-preview-panel { scroll-margin-top: 20px; }
+
+  /* Keep the surrounding library and support tools at the same readable scale. */
+  .studio-heading { margin-bottom: 20px; }
+  .studio-heading .eyebrow { display: none; }
+  .studio-heading p { font-size: 14px; }
+  .studio-stamp { padding: 12px 18px; border-radius: 8px; transform: none; font-size: 12px; }
+  .studio-workflow { gap: 12px; margin-bottom: 20px; }
+  .studio-workflow button { padding: 16px; }
+  .studio-workflow button > strong { font-size: 14px; }
+  .studio-workflow button > small { font-size: 12px; }
+  .library-toolbar .caption,
+  .library-card-top,
+  .library-card > .caption,
+  .draft-badge,
+  .wall-legend,
+  .coach-topline span,
+  .coach-context-row small,
+  .coach-message small { font-size: 12px; }
+  .library-toolbar .button,
+  .library-toolbar .text-button,
+  .card-actions button,
+  .coach-prompts button { min-height: 40px; font-size: 12px; }
+  .library-search input { font-size: 14px; min-height: 42px; }
+  .library-card > h3 { font-size: 15px; }
+  .draft-card p,
+  .material-note > p,
+  .star-result p,
+  .coach-context-row,
+  .coach-topline,
+  .coach-message { font-size: 14px; }
+  .card-actions { gap: 8px; padding-top: 5px; }
+  .card-actions button { padding: 4px; }
+}
+
+@media screen and (min-width: 1021px) {
+  .resume-workspace .resume-heading > div { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 24px; }
+  .resume-workspace .resume-heading h1 { margin: 0; }
+  .resume-workflow { gap: 10px; }
+}
+
+@media screen and (max-width: 1180px) {
+  .resume-workspace .resume-layout { gap: 18px; grid-template-columns: minmax(300px, .92fr) minmax(350px, 1.08fr); }
+  .resume-workspace .preview-panel { padding: 0 12px 12px; }
+  .resume-workspace .resume-paper { padding: 22px; }
+  .resume-workspace .resume-paper.template-design .resume-person { margin: -22px -22px 20px; }
+  .resume-workspace .editor-form { padding: 18px; }
+  .resume-workspace .resume-toolbar { grid-template-columns: minmax(0, 1fr) 170px auto; gap: 10px; }
+}
+
+@media screen and (max-width: 1020px) {
+  .resume-workspace .resume-layout { grid-template-columns: minmax(0, 1fr); }
+  .resume-workspace .resume-toolbar { grid-template-columns: minmax(0, 1fr) minmax(145px, .5fr); }
+  .resume-workspace .resume-toolbar > .button { grid-column: 1 / -1; justify-content: center; }
+  .resume-pane-links { position: sticky; top: 0; z-index: 5; display: flex; gap: 8px; padding: 8px 0; background: var(--paper); margin: -8px 0 12px; }
+  .resume-pane-links a { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); font-size: 13px; color: var(--green); }
+  .resume-workspace #resume-editor-panel,
+  .resume-workspace #resume-preview-panel { scroll-margin-top: 66px; }
+  .resume-workspace .preview-panel { padding: 0 18px 18px; }
+}
+
+@media screen and (max-width: 740px) {
+  .studio-tabs { gap: 3px; padding-bottom: 6px; margin-bottom: 12px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .studio-tabs button { justify-content: center; min-height: 42px; padding: 8px 3px; font-size: 12px; gap: 5px; white-space: nowrap; }
+  .studio-tabs button svg { display: none; }
+  .resume-workspace .resume-heading { flex-wrap: nowrap; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+  .resume-workspace .resume-heading h1 { font-size: 25px; margin-bottom: 10px; }
+  .resume-workspace .resume-heading > .button { font-size: 12px; padding: 8px; min-height: 40px; flex-shrink: 0; }
+  .resume-workspace .resume-heading > .button svg { display: none; }
+  .resume-workflow { gap: 9px; }
+  .resume-workflow li { gap: 4px; font-size: 12px; white-space: nowrap; }
+  .resume-workflow b { display: none; }
+  .resume-workflow li + li::before { margin-right: 2px; }
+  .resume-workspace .sample-notice { padding: 6px 10px; gap: 4px 8px; flex-wrap: wrap; line-height: 1.6; }
+  .resume-workspace .sample-notice .text-button { margin-left: 0; min-height: 32px; }
+  .resume-workspace .resume-toolbar { grid-template-columns: minmax(0, 1fr) minmax(0, .75fr); padding: 12px; gap: 10px; }
+  .resume-workspace .resume-toolbar .field { font-size: 12px; }
+  .resume-workspace .resume-toolbar select { font-size: 13px; padding: 9px 6px; }
+  .resume-workspace .resume-options { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-bottom: 12px; }
+  .resume-workspace .resume-options > details { padding: 0 10px; }
+  .resume-workspace .resume-options > details[open] { grid-column: 1 / -1; }
+  .resume-workspace .technical-readiness > summary { flex-direction: row; align-items: center; gap: 6px; }
+  .resume-workspace .technical-readiness > summary > svg,
+  .resume-workspace .generation-note > summary > span { display: none; }
+  .resume-workspace .workspace-panel-heading { min-height: 54px; padding: 11px 14px; }
+  .resume-workspace .editor-tabs { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 3px; padding: 8px; }
+  .resume-workspace .editor-tabs button { min-height: 42px; padding: 6px 2px; font-size: 12px; }
+  .resume-workspace .editor-form { padding: 16px; }
+  .resume-workspace .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .resume-workspace .field input,
+  .resume-workspace .field select,
+  .resume-workspace .field textarea { font-size: 15px; min-height: 44px; }
+  .resume-workspace .repeat-group { padding: 12px 10px 0; }
+  .resume-workspace .preview-panel { padding: 0 10px 14px; }
+  .resume-workspace .preview-controls { gap: 10px; }
+  .resume-workspace .preview-switch { width: 100%; justify-content: stretch; }
+  .resume-workspace .preview-switch button { min-height: 40px; flex: 1; }
+  .resume-workspace .export-actions { margin-left: 0; width: 100%; }
+  .resume-workspace .export-actions .button { flex: 1; justify-content: center; }
+  .resume-workspace .resume-paper { padding: 22px 16px; }
+  .resume-workspace .resume-paper.template-design .resume-person { margin: -22px -16px 20px; }
+  .resume-workspace .resume-paper .resume-fact { font-size: 14px; }
+  .resume-workspace .resume-paper .source-row { gap: 4px; }
+  .resume-workspace .resume-paper .fact-actions { justify-content: flex-start; gap: 8px; }
+  .resume-workspace .resume-delivery-bar { padding: 12px; }
+  .resume-workspace .editor-step-actions { flex-wrap: wrap; }
+  .studio-heading h1 { font-size: 26px; }
+  .studio-stamp { display: none; }
+  .studio-workflow { grid-template-columns: 1fr; gap: 8px; }
+  .studio-workflow button { padding: 12px 14px; }
+  .studio-workflow button > strong { font-size: 14px; }
+  .studio-workflow button > small { font-size: 12px; }
+  .library-toolbar { padding: 18px 16px 12px; }
+  .library-toolbar .button { font-size: 12px; padding: 8px 10px; }
+  .resume-wall { padding: 16px; gap: 18px; }
+  .wall-legend { padding: 14px 16px; }
+  .coach-panel form textarea { font-size: 15px; }
+}
